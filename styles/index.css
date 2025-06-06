@@ -219,8 +219,8 @@ h4{
 
     /* transform:scale(1); */
 
-    transition:opacity ease-out 600ms;
-    transition:transform ease-out 600ms;
+    transition:all ease-out 600ms;
+    
 }
 
 .subnavi-card-text {
@@ -232,15 +232,15 @@ h4{
 
     opacity:0;
     transition:opacity ease-out 600ms;
-    transition:trasform ease-out 600ms;
+   
 
 }
 
 .subnavi-card:hover .subnavi-img {
     opacity:0.4;
     transform:scale(1.2);
-    transition:opacity ease-out 600ms;
-    transition:transform ease-out 600ms;
+    transition:all ease-out 600ms;
+    
 
 }
 
