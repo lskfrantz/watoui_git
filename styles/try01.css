@@ -33,13 +33,10 @@ body{
 
     color:var(--font-color--main);
 
-    font-family: "LXGW WenKai Mono TC", monospace;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    
-    /* font-family: "LXGW WenKai Mono TC", monospace;
-    font-weight: 400;
-    font-style: normal; */
       
 }
 
@@ -163,7 +160,7 @@ h4{
 
     padding-top:3.5em;
 
-    z-index:1;
+    z-index:0;
 }
 
 .hero {
@@ -197,12 +194,62 @@ h4{
 
 .subnavi{
     grid-column:span 12;
+    background-color: hsl(0,0%,60%,1);
+}
+
+.subnavi-card {
+    position:relative;
+    overflow:hidden
+}
+
+.subnavi-navi-card-image{
+    width:100%;
+    overflow:hidden;
 }
 
 .subnavi-img{
-    
+    display:block;
+
     width:100%;
+    object-fit: contain;
+
+    aspect-ratio: 1/1;
+
+    opacity:1;
+
+    /* transform:scale(1); */
+
+    transition:opacity ease-out 600ms;
+    transition:transform ease-out 600ms;
 }
+
+.subnavi-card-text {
+    position:absolute;
+    top:85%;
+    left:60%;
+
+    color:hsl(0,0%,90%);
+
+    opacity:0;
+    transition:opacity ease-out 600ms;
+    transition:trasform ease-out 600ms;
+
+}
+
+.subnavi-card:hover .subnavi-img {
+    opacity:0.4;
+    transform:scale(1.2);
+    transition:opacity ease-out 600ms;
+    transition:transform ease-out 600ms;
+
+}
+
+.subnavi-card:hover .subnavi-card-text {
+    opacity:1;
+    transition:opacity ease-out 600ms;
+}
+
+
 
 
 /* introduction section */
