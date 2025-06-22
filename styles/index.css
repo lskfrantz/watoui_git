@@ -687,6 +687,15 @@ h2, h3, h4, p{
         grid-column:span 3;
     }
 
+    .subnavi-card {
+        width:100%;
+        margin-top:0;
+    /* position:relative;
+    overflow:hidden;
+    margin-top:.5em;
+    margin-inline: auto; */
+    }
+
     /* introduction section */
 
     .belief-right{
