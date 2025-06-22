@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/artist.css">
+    <title>職人專區</title>
+    <script src="./scripts/artist.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./favicon_io/site.webmanifest">
+
+</head>
+<body>
+    
+        <!-- header section -->
+         <header class="primary-header flex">
+            <div>
+                <img class="logo" src="./imgs/logo_v3_40h.svg" alt="">    
+            </div>
+
+            <div class="nav-container">
+                <nav>
+                    <ul id="primary-navigation" class="primary-navigation flex" [aria-hidden="true" data-visible="false">
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="artist.html">職人專區</a></li>
+                        <li><a href="area.html">產地瀏覽</a></li>
+                        <li><a href="genre.html">類別瀏覽</a></li>
+                        <li><a href="events.html">活動與訊息</a></li>  
+                        <li><a href="about.html">關於和陶居</a></li>      
+                    </ul>
+                </nav>
+            </div>
+            
+            <div class="ham-mem flex">
+                <a href="member.html"><img src="./imgs/member_icon_30.svg" alt=""></a>
+                
+                <button type="button" aria-expanded="false" class="mobile-nav-toggle"  aria-controls="primary-navigation" ><span class="sr-only">menu</span></button>
+
+                
+            </div>
+         </header>
+         
+
+         <main class="container">
+            <div class="page-title">
+                <div class="vertical">
+                    <h1>職人專區</h1>
+                </div>
+
+            </div>
+
+            <div class="left">
+                <div class="left-image-container">
+                    <img src="./imgs/artist/potter_wheel_s.png">
+                </div>
+            </div>
+
+            <!-- the main content with flexed cards -->
+            <div class="center">
+                    <div class="subheader">
+                        <div><h2>職人專訪:</h2></div>
+                        
+                    </div>
+               
+                    <div class="card">
+                        <div class="card-image-container">
+                            <img src="./imgs/artist_yamadasan.webp">
+                        </div>
+                        <h3>在靜謐的信州山間</h3>
+                        <h3>自建傳統登窯的多產作家山田亞弓</h3>
+                        <p>源自於豐沛創作力與才華，山田老師的作品長期以來深受東京室內設計師們熱愛。</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image-container">
+                            <img src="./imgs/artist/tanakasan.webp">
+                        </div>
+                        <h3>信樂燒新秀</h3>
+                        <h3>田中悠的土與火之旅</h3>
+                        <p>田中悠以獨特柴燒技法，呈現自然樸拙之美，專訪中分享其如何從自然尋找創作靈感。</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image-container">
+                            <img src="./imgs/artist/maruyamasan.webp">
+                        </div>
+                        <h3>瀨戶燒匠人</h3>
+                        <h3>村山智之的繽紛釉彩世界</h3>
+                        <p> 村山智之擅長多彩釉藥運用，訪談中娓娓道來其作品背後的工藝細節與美學追求。</p>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-image-container">
+                            <img src="./imgs/artist/suzukisan.webp">
+                        </div>
+                        <h3>常滑燒傳統與創新</h3>
+                        <h3>鈴木佳織挑戰多樣可能性</h3>
+                        <p>鈴木佳織專注於結合傳統製陶技術與現代設計風格，分享她在陶藝路上的心路歷程。</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image-container">
+                            <img src="./imgs/artist/okadasan.webp">
+                        </div>
+                        <h3>信樂燒老匠</h3>
+                        <h3>岡田宗一郎的柴燒人生</h3>
+                        <p>岡田宗一郎以半世紀柴燒經驗述說陶藝與生活之間的深刻聯繫，傳遞陶作蘊含的溫度與人情。</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-image-container">
+                            <img src="./imgs/artist/takahasisan.webp">
+                        </div>
+                        <h3>美濃燒色彩詩人</h3>
+                        <h3>高橋陽介的繽紛實驗</h3>
+                        <p>高橋陽介以多變的色彩與釉色創造出詩意盎然的器皿，訪談探討他的實驗精神與創作理念。</p>
+                    </div>
+
+                
+
+
+            </div>
+            <div class="right">
+                <div class="right-image-container">
+                    <img src="./imgs/artist/tools.webp">
+                </div>
+            </div>
+            
+
+         </main>
+
+         <footer class="footer">
+        
+            <div class="footer-logo">
+                <img class="logo"  src="./imgs/logo_v3_40h.svg" alt="the logo of Watoui" class="logo-image">
+            </div>
+            <div class="footer-navi">
+                <h3>網站連結</h3>
+                <ul class="footer-navi" id="footer-navi">
+                    <li><a href="member.html">會員專區</a></li>
+                    <li><a href="artist.html">職人專區</a></li>
+                    <li><a href="area.html">從產地區域瀏覽</a></li>
+                    <li><a href="genre.html">以器皿類型瀏覽</a></li>
+                    <li><a href="events.html">活動與訊息</a></li>
+                    <li><a href="about.html">關於和陶居</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>我們的粉專</h3>
+                <p>
+                    <a href=""><img src="./imgs/facebook_20.svg" alt="the logo of Facebook" > </a>
+                    <a href=""><img src="./imgs/instagram_20.svg" alt="the logo of Instagram" > </a>
+                </p>
+                <h3>聯絡我們</h3>
+                <p>
+                    <a href="">e-mail us</a>
+                </p>
+                
+            </div>
+            <div class="footer-membership">
+                <h3>會員專區</h3>
+                <ul class="footer-navi" id="footer-navi">
+                    <li><a href="index.html">會員登入</a></li>
+                    <li><a href="index.html">茶道體驗登記</a></li>
+                    <li><a href="index.html">會員專屬訊息</a></li>
+                    <li><a href="index.html">其他活動登記</a></li>
+                    <li><a href="index.html">日本當地體驗代客報名</a></li>
+                </ul>
+            </div>
+
+    </footer>
+
+
+   
+    
+</body>
+</html>

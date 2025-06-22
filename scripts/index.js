@@ -1,21 +1,26 @@
-// hamburger toggle
 
-const mainNavi = document.getElementById("main-navi");
-const hamburgerToggle = document.getElementById("hamburger-toggle");
 
-hamburgerToggle.addEventListener("click", ()=>{
-    const visibility = mainNavi.getAttribute("data-visible");
+const primaryNav = document.querySelector('.primary-navigation');
+const navToggle = document.querySelector('.mobile-nav-toggle');
 
-    if(visibility=="off"){
-        mainNavi.setAttribute("data-visible","on");
-        hamburgerToggle.setAttribute("aria-expanded","true");
-    } else if(visibility=="on"){
-        mainNavi.setAttribute("data-visible","off");
-        hamburgerToggle.setAttribute("aria-expanded","false");
+navToggle.addEventListener('click', () =>{
+    const visibility = primaryNav.getAttribute("data-visible");
+    if(visibility=="false"){
+        primaryNav.setAttribute('data-visible', "true");
+        navToggle.setAttribute('aria-expended', "true");
+        navToggle.classList.toggle("toggle-icon");
+        
+    } else if(visibility=="true") {
+         primaryNav.setAttribute('data-visible', "false");
+         navToggle.setAttribute('aria-expended', "false");
+         navToggle.classList.toggle("toggle-icon");
+        
+          
     }
-});
+ 
+})
 
-// info image handling
+// events image handling
 
 // get list objects
 const infoFirst = document.getElementById("first");
@@ -28,11 +33,12 @@ const infoFifth = document.getElementById("fifth");
 let currentInfo=document.querySelector(".show");
 
 // get img object
-const imgFirst = document.getElementById("first-img");
-const imgSecond = document.getElementById("second-img");
-const imgThird = document.getElementById("third-img");
-const imgFourth = document.getElementById("fourth-img");
-const imgFifth = document.getElementById("fifth-img");
+const imgFirst = document.getElementById("first-container");
+const imgSecond = document.getElementById("second-container");
+const imgThird = document.getElementById("third-container");
+const imgFourth = document.getElementById("fourth-container");
+const imgFifth = document.getElementById("fifth-container");
+
 
 infoFirst.addEventListener("mouseover", ()=>{
     currentInfo.classList.remove("show");
@@ -63,6 +69,45 @@ infoFifth.addEventListener("mouseover", ()=>{
     imgFifth.classList.add("show");
     currentInfo = imgFifth;
 });
+
+//  adding observer to h-one
+
+const hOne = document.querySelector(".h-one");
+const beliefRight= document.querySelector(".belief-right");
+
+const observer = new IntersectionObserver(
+    entries =>{
+        // entries[0].target.classList.toggle("on");
+        console.log(entries[0].isIntersecting);
+        
+        if(entries[0].isIntersecting){
+            hOne.classList.add("on");
+            observer.unobserve(entries[0].target);
+        }
+    },
+    {
+        rootMargin:"-300px",
+    }
+)
+
+observer.observe(beliefRight);
+
+
+const body = document.querySelector('body');
+const artist = document.querySelector('.artist');
+
+const observerArtist = new IntersectionObserver(entries=>{
+     if(entries[0].isIntersecting){
+            body.classList.add("bgcolor");
+        }else if(!entries[0].isIntersecting){
+            body.classList.remove("bgcolor");
+        }
+},{
+    rootMargin:"-150px"
+});
+
+observerArtist.observe(artist);
+
 
 
 

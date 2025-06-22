@@ -1,0 +1,324 @@
+/* general setting */
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight:400;
+}
+
+ul{  
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+img{
+    display: block;
+}
+
+
+/* header section */
+
+.primary-header{
+
+    position:fixed;
+    top:0px;
+    left:0px;
+
+    width:100%;
+    height:2.8em;
+    
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background-color: hsl(0, 0%, 100%, .5);
+    
+    z-index:1000;
+}
+
+/* logo */
+
+.logo{
+    margin-left: 2em;
+}
+
+/* navigation */
+
+.primary-navigation{
+
+    display: flex;
+    gap:1em;
+
+    /* this works */
+    /* z-index:800; */
+
+}
+
+
+
+
+
+/* hamburger and members */
+
+.ham-mem{
+    /* position:absolute;
+    right:2em; */
+
+    padding-right: 1em;
+
+    z-index: 900;
+
+    display:flex;
+    gap:1em;
+    align-items: center;
+
+}
+
+.mobile-nav-toggle{
+    display:none;
+}
+
+
+.sr-only{
+    display: none;
+}
+
+
+/* main */
+.container {
+    
+
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+
+    padding-top:2.8em;
+
+    
+}
+
+/* about title banner */
+
+.page-title{
+    grid-column: span 12;
+    /* writing-mode: vertical-rl;
+    text-orientation: upright; */
+
+    background-image: url(../imgs/texture_08.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    
+}
+
+.vertical{
+
+    width:30%;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  
+}
+
+.vertical>h1{
+    font-size: 3rem;
+    background-color: hsl(0, 0%, 100%, .3);
+    padding:1em .5em 1em .5em;
+    text-shadow: 1px 1px 1px hsl(0, 0%, 100%, .3);
+
+}
+
+div.temp{
+    grid-column:span 12;
+}
+
+div.temp>div{
+    padding-block:2em;
+}
+
+div.temp>div.message{
+    width:20rem;
+
+    margin-inline: auto;
+}
+
+div.temp>div.message>h4{
+    padding-left:15em;
+}
+
+div.image-container{
+    width:50%;
+    overflow: hidden;
+    margin-inline:auto;
+}
+
+div.image-container>img{
+    width:100%;
+    object-fit: contain;
+}
+
+/* fotter section */
+.footer {
+    width:100%;
+    /* margin-top: 3em; */
+
+    padding-top: .625em;
+    padding-bottom: .625em;
+
+    background-color: hsl(37, 42%, 54%,1);
+
+    display:grid;
+    grid-template-columns: 1fr;
+
+    gap:1em;
+
+    color:var(--font--color--dark-background) ;
+
+    font-size: 0.75rem;
+    
+
+}
+
+.footer h3{
+    /* font-size: 1rem; */
+    padding-bottom: 0.5em;
+}
+
+.footer-logo{
+   text-align: center;
+}
+
+.footer-navi{
+    text-align: center;
+}
+
+.footer-contact{
+    text-align: center;
+}
+
+.footer-contact>p:nth-child(2){
+    padding-bottom: 1em;
+}
+
+.footer-contact a {
+    display:inline-block;
+    padding:.3em .1em;
+}
+
+.footer-membership{
+    text-align: center;
+   
+}
+
+
+
+
+
+
+
+@media screen and (max-width:767px) {
+
+
+    .primary-navigation{
+        position:fixed;
+        inset:0 0 0 30%;
+
+        padding:10em 2em;
+
+        /* sometimes the line below doesn't work  */
+        /* background-color:hsl(0 0% 100% 1);
+        backdrop-filter:blur(0.3rem); */
+
+        background-color:hsl(0, 0%, 100%, .6);
+        backdrop-filter:blur(0.3rem);
+
+        
+        display:flex;
+        flex-direction: column;
+        gap:2em;
+
+        transform:translateX(100%);
+        transition:transform ease-out 350ms;
+
+
+    }
+
+    .primary-navigation[data-visible="true"]{
+        transform:translateX(0%);
+    }
+
+    .mobile-nav-toggle{
+    
+        display:block;
+
+        width: 2rem;
+        aspect-ratio: 1;
+        /* top:2em; */
+        
+
+        border:0;
+        background-image: url("../imgs/hamburger_svg.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        /* background-color: hsl(43, 100%, 83%,0); */
+    }
+
+    .toggle-icon{
+        background-image:url("../imgs/arrow_svg.svg");
+    }
+
+    
+}
+
+@media screen and (min-width:768px) {
+    
+
+   
+   
+
+     /* footer section */
+    .footer {
+        grid-template-columns: 1fr 17vw 17vw 20vw;
+    }
+
+    .footer-logo{
+        text-align: left;
+        align-self: center;
+     }
+
+     
+
+
+    .footer-navi{
+        text-align: left;
+    }
+
+    .footer-contact{
+        text-align: left;
+    }
+
+
+    .footer-membership{
+        text-align: left;
+    
+    }
+
+}
+
+
+
+
+
+
