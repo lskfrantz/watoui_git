@@ -298,7 +298,20 @@ h2, h3, h4, p{
 .genre-text{
         grid-column: span 12;
 
+        display: flex;
+        flex-direction:column;
+
+        gap:3em;
+
+        /* padding-right:3em; */
+
+        align-items: center;
+
     }
+
+ .genre-text>p{
+    padding:0 3em 4em 3em;
+ }   
 
 
 .g-image-container-left-top{
@@ -361,7 +374,20 @@ h2, h3, h4, p{
 
 .area-text{
     grid-column:span 12;
+
+     display: flex;
+        flex-direction:column;
+
+        gap:3em;
+
+        /* padding-right:3em; */
+
+        align-items: center;
 }
+
+.area-text>p{
+    padding:0 3em 2em 3em;
+ } 
 
 .area-image{
     grid-column: span 12;
